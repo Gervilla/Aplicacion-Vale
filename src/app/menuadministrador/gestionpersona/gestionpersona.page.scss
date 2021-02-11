@@ -1,0 +1,42 @@
+ion-row{
+    height: 17vh;
+}
+
+ion-button{
+    height: 100%;
+    width: 100%;
+    border-width: 10px;
+    border-color: black;
+}
+
+.imagenD{
+    height: 10vh;
+    position: absolute;
+    right: 6vw;
+    
+}
+.imagenI{
+    height: 10vh;
+    position: absolute;
+    left: 6vw;
+    
+}
+.texto{
+    position: absolute;
+    left: 8vw;
+}
+
+.chat{
+    height: 10vh;
+    position: absolute;
+    right: 8vw;
+}
+
+.profile-pic{
+    object-fit: cover;
+    height: 15vh;
+    width: 15vh;
+    position: absolute;
+    right: 6vw;
+    border-radius: 50%
+}

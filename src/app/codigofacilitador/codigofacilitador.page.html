@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." routerLink='/home' src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      Introduce tu Codigo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class ="log">
+    <ion-item class="introducir">
+      <ion-label position ="floating" color="black">Introduce el usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item class="introducir">  
+      <ion-label position ="floating" color="black">Introduce la contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
+    </ion-item>
+    <ion-button color="vale-primary" shape="round" size="small" expand="block" class="boton" (click)="enviar()">
+      Iniciar Sesión
+    </ion-button>
+  </div>
+
+</ion-content> 

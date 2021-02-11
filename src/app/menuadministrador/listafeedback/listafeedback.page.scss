@@ -1,0 +1,48 @@
+.imagenD{
+    height: 10vh;
+    position: absolute;
+    right: 6vw;   
+}
+.imagenI{
+    height: 10vh;
+    position: absolute;
+    left: 6vw;
+}
+
+.texto{
+    position: absolute;
+    left: 8vw;
+}
+
+.grid{
+    width: 100%;
+    height: 13vh;
+}
+
+.profile-pic{
+    object-fit: cover;
+    height: 10vh;
+    width: 10vh;
+    position: absolute;
+    right: 6vw;
+    border-radius: 50%
+}
+
+ion-row{
+    height: 17vh;
+}
+
+ion-button{
+    height: 100%;
+    width: 100%;
+    border-width: 10px;
+    border-color: black;
+}
+
+.enunciadoVideo{
+    margin-top: 1vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+

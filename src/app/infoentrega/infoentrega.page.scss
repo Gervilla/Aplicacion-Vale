@@ -1,0 +1,66 @@
+.enunciado{
+    height:48vh;
+    margin-bottom: 1vh;
+}
+
+.enunciadoVideo{
+    margin-top: 1vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.respuesta{
+    height:33vh;
+}
+
+.texto{
+    position: absolute;
+    font-size:2.3vh;
+    left: 3vw;
+}
+
+.imagen{
+    height:80%;
+    right: 1vw;
+    position: absolute;
+}
+
+.icono{
+    max-height: 4rem;
+}
+
+ion-button{
+    height: 10vh;
+    width: 100%;
+}
+
+.respuestagrande{
+    height:40vh;
+    width: 100%;
+}
+.respuestapequeña{
+    height:10vh;
+    width: 100%;
+}
+
+.cajaPerfil{
+    margin-top: 2vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:25vh;
+}
+
+.perfil{
+    height: 25vh;
+    width: 25vh;
+    object-fit: cover;
+    border-radius: 10%
+}
+
+.col{
+    margin-left: 1rem;
+    margin-top: 2vh;
+    font-size: 3vh;
+}

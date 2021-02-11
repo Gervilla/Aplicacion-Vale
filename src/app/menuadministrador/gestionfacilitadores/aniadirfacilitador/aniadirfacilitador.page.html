@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." routerLink='/gestionfacilitador' src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      {{(this.editar)? this.facilitador.nombre +" "+ this.facilitador.apellido +" (Editar)":"Añadir facilitador"}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class ="log">
+
+    <div class='disclaimer'>
+      Click para {{(this.fotoBuffer)? "cambiar la":"subir una"}} foto de perfil
+    </div>
+
+    <div class='cajaPerfil'>
+      <label for="input" style="font-size: 20pt; padding: 30px">
+        <img class='perfil' src="{{this.getProfilePic()}}"/>
+        <input id="input" type="file" accept=".png,.jpg,.jpeg" class="hideInput" (change)="changeListener($event)">
+      </label>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item class="introducir">
+            <ion-label position="floating" color="black">Nombre</ion-label>
+            <ion-input type="text" [(ngModel)]="facilitador.nombre"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="introducir">
+            <ion-label position="floating" color="black">Apellido</ion-label>
+            <ion-input type="text" [(ngModel)]="facilitador.apellido"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-item class="introducir">
+      <ion-label position="floating" color="black">Correo</ion-label>
+      <ion-input type="text" [(ngModel)]="facilitador.correo"></ion-input>
+    </ion-item>
+    <ion-item class="introducir">  
+      <ion-label position ="floating" color="black">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="facilitador.contrasena"></ion-input>
+    </ion-item>
+    <ion-item class="introducir">  
+      <ion-label position ="floating" color="black">Repetir Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="contrasena2"></ion-input>
+    </ion-item>
+
+    <ion-button color="vale-primary" shape="round" size="small" expand="block" class="boton" style="color: white" (click)="submit()">
+      {{(this.editar)?"Editar":"Dar de Alta"}}
+    </ion-button>
+  </div>
+
+</ion-content> 

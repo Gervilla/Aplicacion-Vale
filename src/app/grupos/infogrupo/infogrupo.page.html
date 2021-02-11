@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." routerLink="/grupos" src="../../assets/images/vale-logo.png"/>
+    </ion-buttons>
+    <ion-title>{{this.grupo.nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="log">
+    <ion-grid [hidden]="this.editando">
+      <ion-row>
+        <ion-col>
+          <div class="col">
+            <ion-label>Nombre: {{this.grupo.nombre}}</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="col">
+            <ion-label>Personas:</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item *ngFor="let i of personas" routerLink="{{'/infopersona/'+i.id}}">
+            <ion-label>{{i.fullname}}</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" [hidden]="this.editando">
+    <ion-fab-button color="vale-secondary" (click)="goToEdit()">
+      <ion-icon name="pencil-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

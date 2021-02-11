@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." (click)="this.goBack()" src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      Ejercicios - {{this.titulo}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="noneText" [hidden]="getNoneMsg()">
+    No hay ejercicios para esta Fecha
+  </div>
+  <ion-grid [hidden]="this.ejercicios.length == 0">
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="opciones1()" color="{{ this.getColor1() }}" [hidden]="isHidden1()">
+          <div class="texto" style="color: white"><h1>{{ this.getText1() }}</h1></div>
+          <img class="imagen" alt="Foto del ejercicio" src="{{ this.getIcon1() }}">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="opciones2()" color="{{ this.getColor2() }}" [hidden]="isHidden2()">
+          <div class="texto" style="color: white"><h1>{{ this.getText2() }}</h1></div>
+          <img class="imagen" alt="Foto del ejercicio" src="{{ this.getIcon2() }}">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="opciones3()" color="{{ this.getColor3() }}" [hidden]="isHidden3()">
+          <div class="texto" style="color: white"><h1>{{ this.getText3() }}</h1></div>
+          <img class="imagen" alt="Foto del ejercicio" src="{{ this.getIcon3() }}">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="previousPage()" color="transparent" [class.button-disabled]="isPButtonDisable()">
+          <img class="imagenFlecha" alt="Flecha para ir a la izquierda" src="../../assets/icon/flechaI.png">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="nextPage()" color="transparent" [class.button-disabled]="isNButtonDisable()">
+          <img class="imagenFlecha" alt="Flecha para ir a la derecha" src="../../assets/icon/flechaD.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

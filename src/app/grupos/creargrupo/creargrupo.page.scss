@@ -1,0 +1,63 @@
+.log{    
+
+    width: 80%;
+    padding-top: 20vh;
+    margin: auto;
+    max-width: 600px
+}
+
+.introducir{
+    font-size: 3vh;
+}
+
+ion-item{
+    margin-bottom: 5vh;
+}
+
+.persona-item{
+    margin-bottom: 0;
+}
+
+ion-button{
+    margin-top: 10vh;
+}
+
+.boton{
+    font-size: 3vh;
+}
+
+ion-footer{
+    position: fixed;
+    bottom: 10%;
+}
+
+.div-listo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.listo{
+    position: absolute;
+    margin: auto;
+    font-size: 3vh;
+}
+.subscroll[scrollx=true], div[scrolly=true] {
+    position: relative;
+    overflow: hidden;
+  
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.subscroll[scrollx=true] {
+    overflow-x: auto;
+}
+  
+.subscroll[scrolly=true] {
+    overflow-y: auto;
+}
+
+#myFixZone {
+    height: 68vh;
+}

@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." routerLink='/home' src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      Introduce tu Codigo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="ponerOveja()" class="botonanimal" color="light-green" >
+          <img class="imagen" alt="Boton oveja" src="../../assets/images/animales/oveja.png">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="ponerGato()" class="botonanimal" color="purple">
+          <img class="imagen" alt="Boton gato" src="../../assets/images/animales/gato.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="ponerLeon()" class="botonanimal" color="vale-orange" >
+          <img class="imagen" alt="Boton leon" src="../../assets/images/animales/leon.png">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="ponerCerdo()" class="botonanimal" color="vale-pink">
+          <img class="imagen" alt="Boton cerdo" src="../../assets/images/animales/cerdo.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="ponerTortuga()" class="botonanimal" color="vale-secondary" >
+          <img class="imagen" alt="Boton tortuga" src="../../assets/images/animales/tortuga.png">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="ponerZorro()" class="botonanimal" color="vale-yellow">
+          <img class="imagen" alt="Boton zorro" src="../../assets/images/animales/zorro.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button class="codigo" color="{{this.Colores[0]}}">
+            <img class="imagen" alt="Primer animal" src="{{this.dibujos[0]}}">
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="codigo" color="{{this.Colores[1]}}">
+            <img class="imagen" alt="Segundo animal" src="{{this.dibujos[1]}}">
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="codigo" color="{{this.Colores[2]}}">
+            <img class="imagen" alt="Tercer animal" src="{{this.dibujos[2]}}">
+          </ion-button>
+        </ion-col>
+        <ion-col >
+          <ion-button class="codigo" (click)="borrarColores()"  color="white">
+            <img class="basura" alt="Borrar animales seleccionados" src="../../assets/images/basura.png">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+    
+</ion-content>

@@ -1,0 +1,31 @@
+ion-row{
+    height: 23vh;
+}
+
+ion-button{
+    height: 100%;
+    width: 100%;
+    border-width: 10px;
+    border-color: black;
+}
+
+.imagen{
+    height: 10vh;
+    position: absolute;
+    right: 6vw;
+    
+}
+
+.texto h1{
+    font-size: 4vh;
+}
+.texto{
+    position: absolute;
+    left: 8vw;
+}
+
+.chat{
+    height: 10vh;
+    position: absolute;
+    right: 8vw;
+}

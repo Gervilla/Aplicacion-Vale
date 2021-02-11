@@ -1,0 +1,90 @@
+.respuestagrande{
+    height:28vh;
+    width: 100%;
+}
+.respuestapequeña{
+    height:10vh;
+    width: 100%;
+}
+.texto{
+    position: absolute;
+    left: 3vw;
+}
+.imagen{
+    height:80%;
+    right: 1vw;
+    position: absolute;
+}
+
+.espaciador{
+    height:5vh;
+}
+
+.icono{
+    max-height: 4rem;
+}
+
+.col{
+    top: 10vh;
+    height: 10%;
+    width: 80%;
+}
+
+ion-button{
+    height: 10vh;
+    width: 100%;
+}
+
+ion-card{
+    margin-top:2vh
+}
+
+
+.botEnviar{
+    margin-top: 1vh;
+}
+
+.cajaPerfil{
+    margin-top: 4vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:25vh;
+}
+
+.perfil{
+    height: 25vh;
+    width: 25vh;
+    object-fit: cover;
+    border-radius: 10%
+}
+.icon{
+    width: 60%;
+    height: 10vh;
+}
+.input2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hideInput {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+  }
+  .botonesAbajo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.enunciadoVideo{
+    height:15vh;
+    width: 100%;
+    margin-top: 1vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

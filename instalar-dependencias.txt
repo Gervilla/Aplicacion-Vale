@@ -1,0 +1,14 @@
+npm install --save @ionic/storage
+npm install @angular/fire firebase --save
+
+
+//Permitir el acceso al puerto 8100
+netsh advfirewall firewall add rule name="TCP Port 8100" dir=in localport=8100 protocol=TCP action=allow
+//Reiniciar ordenador
+
+
+//Hosting en la Web Usando LocalTunnel
+
+npm install -g localtunnel
+ionic serve --external --disableHostCheck
+lt --port 8100 --local-host localhost

@@ -1,0 +1,160 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img
+        class="vale-logo"
+        alt="Boton con el logo de Vale para ir atrás."
+        routerLink="/gestionpersona"
+        src="../../assets/images/vale-logo.png"
+      />
+    </ion-buttons>
+    <ion-title>
+      {{(this.editar)? this.persona.nombre +" "+ this.persona.apellido +"(Editar)":"Añadir Persona"}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="log" [hidden]="this.seleccionarFacilitadores">
+    <div class="disclaimer">Click para {{(this.fotoBuffer)? "cambiar la":"subir una"}} foto de perfil</div>
+
+    <div class="cajaPerfil">
+      <label for="input" style="font-size: 20pt; padding: 30px">
+        <img
+          class="perfil"
+          alt="Añadir Imagen de la persona"
+          src="{{this.getProfilePic()}}"
+        />
+        <input
+          id="input"
+          type="file"
+          accept=".png,.jpg,.jpeg"
+          class="hideInput"
+          (change)="changeListener($event)"
+        />
+      </label>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item class="introducir">
+            <ion-label position="floating" color="black">Nombre</ion-label>
+            <ion-input type="text" [(ngModel)]="persona.nombre"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="introducir">
+            <ion-label position="floating" color="black">Apellido</ion-label>
+            <ion-input type="text" [(ngModel)]="persona.apellido"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <ion-button class="codigo" color="{{this.Color1()}}">
+          <img
+            class="codigo-imagen"
+            alt="Primer animal de la persona"
+            src="{{this.Imagen1()}}"
+          />
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="codigo" color="{{this.Color2()}}">
+          <img
+            class="codigo-imagen"
+            alt="Segundo animal de la persona"
+            src="{{this.Imagen2()}}"
+          />
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="codigo" color="{{this.Color3()}}">
+          <img
+            class="codigo-imagen"
+            alt="Tercer animal de la persona"
+            src="{{this.Imagen3()}}"
+          />
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="generarCodigo()" class="codigo" color="white">
+          <img
+            class="codigo-imagen"
+            alt="Añadir los codigos de la persona"
+            src="../../../../assets/icon/refresh.png"
+          />
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-button
+      (click)="cambiarVentana()"
+      color="vale-primary"
+      shape="round"
+      size="small"
+      expand="block"
+      class="boton"
+    >
+      Elegir Facilitadores
+    </ion-button>
+
+    <ion-button
+      color="vale-primary"
+      shape="round"
+      size="small"
+      expand="block"
+      class="boton"
+      (click)="registrar()"
+    >
+      {{(this.editar)?"Editar":"Dar de Alta"}}
+    </ion-button>
+  </div>
+
+  <div [hidden]="!this.seleccionarFacilitadores">
+    <ion-searchbar
+      (ionInput)="filterList($event)"
+      showCancelButton="focus"
+    ></ion-searchbar>
+    <div
+      class="subscroll"
+      id="myFixZone"
+      scrollY="true"
+    >
+      <ion-list>
+        <ion-item *ngFor="let i of indexFacilitadores" class="facilitador-item">
+          <ion-label>{{this.facilitadores[i].fullname}}</ion-label>
+          <ion-checkbox
+            slot="start"
+            [(ngModel)]="this.facilitadores[i].isChecked"
+            color="vale-secondary"
+          ></ion-checkbox>
+          <ion-thumbnail slot="end">
+            <img
+              alt="Foto del facilitador a asignar"
+              src="{{this.facilitadores[i].foto}}"
+            />
+          </ion-thumbnail>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-footer [hidden]="!this.seleccionarFacilitadores">
+      <div class="div-listo">
+        <ion-button
+          class="listo"
+          (click)="cambiarVentana()"
+          color="vale-primary"
+          shape="round"
+          size="small"
+        >
+          Listo
+        </ion-button>
+      </div>
+    </ion-footer>
+  </ion-fab>
+</ion-content>

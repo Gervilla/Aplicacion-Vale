@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." routerLink='/menupersona' src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      Calendario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-grid>
+    <ion-row class="fila">
+      <ion-col>
+        <ion-button routerLink="/ejercicios/lunes" color="rosa">
+          <h1>Lunes</h1>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button routerLink="/ejercicios/martes" color="purple">
+          <h1>Martes</h1>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="fila">
+      <ion-col>
+        <ion-button routerLink="/ejercicios/miercoles" color="vale-orange">
+          <h1>Miercoles</h1>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button routerLink="/ejercicios/jueves" color="vale-pink">
+          <h1>Jueves</h1>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row class="fila">
+
+      <ion-col>
+        <ion-button routerLink="/ejercicios/viernes" color="vale-secondary">
+          <h1>Viernes</h1>
+        </ion-button>
+      </ion-col>
+      
+      <ion-col>
+        <ion-row class="fila2">
+          <ion-button routerLink="/ejercicios/sabado" color="vale-yellow">
+            <h1>Sabado</h1>
+          </ion-button>
+        </ion-row>
+        <ion-row class="fila2">
+          <ion-button routerLink="/ejercicios/domingo" color="light-green">
+            <h1>Domingo</h1>
+          </ion-button>
+        </ion-row>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

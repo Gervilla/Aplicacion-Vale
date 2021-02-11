@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." routerLink="/fecha" src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      {{this.ejercicio.nombre}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class='cajaPerfil'>
+    <label style="font-size: 20pt; padding: 30px">
+      <img class='perfil' alt="Foto del ejercicio." src="{{this.foto}}"/>
+    </label>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+            
+            <div *ngFor="let source of videoSrc" class="enunciadoVideo">
+              <video width="240" height="180" controls>
+                <source src="{{source}}">
+              </video>
+            </div>
+            <div *ngFor="let source of audioSrc" class="enunciadoVideo">
+              <audio controls>
+                <source [src]="source">
+              </audio>
+            </div>
+        <ion-card>
+          <ion-card-content>
+            <div  [ngClass]="{'respuestagrande' : this.audioSrc.length == 0 && this.videoSrc.length == 0, 'respuestapequeña': this.audioSrc.length > 0 || this.videoSrc.length > 0}">
+            {{this.ejercicio.enunciado}}
+          </div>
+         </ion-card-content>
+        </ion-card>
+     
+      </ion-col>
+    </ion-row>
+    <ion-row>  
+      <ion-col>
+        <ion-button color="vale-pink">
+          <div class="texto" style="color: white">CHAT</div>
+          <img class="imagen" alt="Boton del chat." src="../../assets/icon/chat.png">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="goToEntrega()" color="primary">
+          <div class="texto" style="color: white">ENTREGA</div>
+          <img class="imagen" alt="Boton para ir a la entrega del ejercicio." src="../../assets/icon/enviar.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

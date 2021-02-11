@@ -1,0 +1,46 @@
+ion-row{
+    height: 22.5vh;
+}
+
+ion-button{
+    height: 100%;
+    width: 100%;
+    border-width: 10px;
+    border-color: black;
+}
+
+.imagen{
+    object-fit: cover;
+    height: 15vh;
+    width: 15vh;
+    position: absolute;
+    right: 6vw;
+    border-radius: 10%
+}
+.imagenFlecha{
+    height: 18vh;
+}
+
+
+
+.texto h1{
+    font-size: 3vh;
+}
+.texto{
+    position: absolute;
+    left: 8vw;
+}
+
+.chat{
+    height: 10vh;
+    position: absolute;
+    right: 8vw;
+}
+
+.noneText{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}

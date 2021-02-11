@@ -1,0 +1,98 @@
+.log{    
+    width: 80%;
+    margin: auto;
+    margin-top: 3vh;
+}
+
+.introducir{
+    font-size: 3vh;
+}
+
+ion-item{
+    margin-bottom: 3vh;
+}
+
+ion-select{
+    width:90%;
+}
+
+.boton{
+    margin-top: 8vh;
+    font-size: 3vh;
+}
+
+.codigo{
+    height: 9vh;
+    width: 90%;
+}
+
+
+.codigo-imagen{
+    max-height: 3.5rem;
+}
+
+.disclaimer{
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.cajaPerfil{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:25vh;
+}
+
+.perfil{
+    height: 25vh;
+    width: 25vh;
+    object-fit: cover;
+}
+
+.hideInput{
+    position: absolute;
+    height: 0.1%;
+    width: 0.1%;
+    opacity: 0;
+}
+
+.facilitador-item{
+    margin-bottom: 0;
+}
+
+ion-footer{
+    position: fixed;
+    bottom: 10%;
+}
+.div-listo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.listo{
+    position: absolute;
+    margin: auto;
+    font-size: 3vh;
+}
+
+
+.subscroll[scrollx=true], div[scrolly=true] {
+    position: relative;
+    overflow: hidden;
+  
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.subscroll[scrollx=true] {
+    overflow-x: auto;
+}
+  
+.subscroll[scrolly=true] {
+    overflow-y: auto;
+}
+
+#myFixZone {
+    height: 68vh;
+}

@@ -1,0 +1,125 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." routerLink="/menupersona" src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      Valoración
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="log">
+    <div class="titulo">
+      <h1>¿Qué valoración le pone a la aplicación?</h1> 
+    </div>
+
+    <ion-grid class="grid">
+      <ion-row class="fila">
+        <ion-col class="columna">
+          <ion-button (click)="ponerColor(0)" class="botonEstrella"  color="{{this.colores[0]}}">
+            <img src="../../assets/icon/valoracion/valoracion1.png">
+          </ion-button>
+        </ion-col>
+        <ion-col class="columna">
+          <ion-button (click)="ponerColor(1)" class="botonEstrella"  color="{{this.colores[1]}}">
+            <img src="../../assets/icon/valoracion/valoracion2.png">
+          </ion-button>
+        </ion-col>
+        <ion-col class="columna">
+          <ion-button (click)="ponerColor(2)" class="botonEstrella" color="{{this.colores[2]}}">
+            <img src="../../assets/icon/valoracion/valoracion3.png">
+          </ion-button>
+        </ion-col>
+        <ion-col class="columna">
+          <ion-button (click)="ponerColor(3)" class="botonEstrella" color="{{this.colores[3]}}">
+            <img src="../../assets/icon/valoracion/valoracion4.png">
+          </ion-button>
+        </ion-col>
+        <ion-col class="columna">
+          <ion-button (click)="ponerColor(4)" class="botonEstrella" color="{{this.colores[4]}}">
+            <img src="../../assets/icon/valoracion/valoracion5.png">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+              
+              <div *ngFor="let source of videoSrc" class="enunciadoVideo">
+                <video width="240" height="180" controls>
+                  <source src="{{source}}">
+                </video>
+              </div>
+              <div *ngFor="let source of audioSrc" class="enunciadoVideo">
+                <audio controls>
+                  <source [src]="source">
+                </audio>
+              </div>
+          <ion-card>
+            <ion-card-content>
+              <div  [ngClass]="{'respuestagrande' :this.videoSrc.length == 0, 'respuestapequeña': this.videoSrc.length > 0}">
+              <ion-textarea rows="5" maxlength="100" placeholder="Cuentanos en que podemos mejorar" 
+              [(ngModel)]="feedback.comentario">
+              </ion-textarea>
+            </div>
+           </ion-card-content>
+          </ion-card>
+       
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="botonesAbajo">
+          <ion-button color="vale-primary" class="icon">
+            <input
+            id="input2"
+            type="file"
+            accept=".mp4,.mp3,.wav,.ogg"
+            class="hideInput"
+            (change)="cambiarMedia($event)"
+            />
+            <img class="icono" alt="Boton de adjuntar archivo" src="../../assets/icon/adjuntar.png">
+          </ion-button>
+        </ion-col>
+        <ion-col class="botonesAbajo">
+          <ion-button color="vale-primary" class="icon">
+            <input
+            id="input2"
+            type="file"
+            accept=".mp4"
+            class="hideInput"
+            (change)="cambiarMedia($event)"
+            />
+            <img class="icono" alt="Boton de grabar video" src="../../assets/icon/video.png">
+          </ion-button>
+        </ion-col>
+        <ion-col class="botonesAbajo">
+          <ion-button color="vale-primary" class="icon">
+            <input
+            id="input2"
+            type="file"
+            accept=".mp3,.wav,.ogg"
+            class="hideInput"
+            (change)="cambiarMedia($event)"
+            />
+            <img class="icono" alt="Boton del microfono para grabar audio" src="../../assets/icon/micro.png">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="botEnviar">
+        <ion-button (click)="submit()" color="primary" class="envio">
+          <div style="color: white"><h1>Enviar</h1></div>
+          <img class="imagen" alt="Boton de enviar respuesta" src="../../assets/icon/enviar.png">
+        </ion-button>
+      </ion-row>
+
+    </ion-grid>
+    
+  </div>
+</ion-content>

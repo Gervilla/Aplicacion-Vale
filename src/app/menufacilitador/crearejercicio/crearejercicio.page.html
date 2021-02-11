@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img
+        class="vale-logo"
+        routerLink="/listaejercicios"
+        src="../../assets/images/vale-logo.png"
+        alt="Boton con el logo de Vale para ir atrás."
+      />
+    </ion-buttons>
+    <ion-title> {{(this.editar)?"Modificacion del Ejercicio":"Creacion del Ejercicio"}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="log">
+    <ion-grid>
+      <ion-row>
+        <ion-card class="nombre">
+          <ion-input
+            placeholder="Nombre del Ejercicio"
+            maxlength="15"
+            [(ngModel)]="ejercicio.nombre"
+          ></ion-input>
+        </ion-card>
+      </ion-row>
+      <ion-row class="cajaPerfil">
+        <div>
+          <label for="input" style="font-size: 20pt; padding: 30px">
+            <img
+              class="perfil"
+              alt="Boton para añadir imagen del ejercicio"
+              src="{{this.getFoto()}}"
+            />
+            <input
+              id="input"
+              type="file"
+              accept=".png,.jpg,.jpeg"
+              class="hideInput"
+              (change)="cambiarFoto($event)"
+            />
+          </label>
+        </div>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item class="introducir">
+            <ion-label position="floating" color="black">Grupo</ion-label>
+            <ion-select
+              [compareWith]="compareWithFn"
+              [(ngModel)]="grupo"
+            >
+              <ion-select-option *ngFor="let grupo of grupos" [value]="grupo">
+                {{grupo.nombre}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Fecha de inicio</ion-label>
+            <ion-datetime
+              displayFormat="DD/MM/YYYY"
+              min="2019"
+              max="2030-12-31"
+              [(ngModel)]="inicio"
+            ></ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Fecha final</ion-label>
+            <ion-datetime
+              displayFormat="DD/MM/YYYY"
+              min="2019"
+              max="2030-12-31"
+              [(ngModel)]="final"
+            ></ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-col>
+            
+        <div *ngFor="let source of videoSrc" class="enunciadoVideo">
+          <video width="240" height="180" controls>
+            <source src="{{source}}">
+          </video>
+        </div>
+        <div *ngFor="let source of audioSrc" class="enunciadoVideo">
+          <audio controls>
+            <source [src]="source">
+          </audio>
+        </div>
+    <ion-card>
+      <ion-card-content>
+        <div  [ngClass]="{'respuestagrande' : this.audioSrc.length == 0 && this.videoSrc.length == 0, 'respuestapequeña': this.audioSrc.length > 0 || this.videoSrc.length > 0}">
+        <ion-textarea rows="5" maxlength="100" placeholder="Introduzca su respuesta aqui" 
+        [(ngModel)]="ejercicio.enunciado">
+        </ion-textarea>
+      </div>
+     </ion-card-content>
+    </ion-card>
+ 
+  </ion-col>
+    </ion-grid>
+
+    <ion-button
+      color="vale-primary"
+      shape="round"
+      size="small"
+      expand="block"
+      class="boton"
+    >
+      <label for="input2" class="input2">
+        <input
+          id="input2"
+          type="file"
+          accept=".mp4,.mp3,.wav,.ogg"
+          class="hideInput"
+          (change)="cambiarMedia($event)"
+        />
+        Adjuntar archivo
+      </label>
+    </ion-button>
+
+    <ion-button
+      color="vale-primary"
+      shape="round"
+      size="small"
+      expand="block"
+      class="boton"
+      (click)="alertEnviar()"
+    >
+    {{(this.editar)?"Modificar":"Crear"}}
+    </ion-button>
+  </div>
+</ion-content>

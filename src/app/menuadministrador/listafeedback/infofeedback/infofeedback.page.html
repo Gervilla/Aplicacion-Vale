@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img
+        class="vale-logo"
+        alt="Boton con el logo de Vale para ir atrás."
+        routerLink='/listafeedback'
+        src="../../assets/images/vale-logo.png"
+      />
+    </ion-buttons>
+    <ion-title>Feedback de {{this.persona.nombre}} {{this.persona.apellido}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="log">
+    
+    <div class="cajaPerfil">
+      <label style="font-size: 20pt; padding: 30px">
+        <img class="perfil" alt="Foto de la persona" src="{{this.foto}}">
+      </label>
+    </div>
+
+    <ion-grid >
+      <ion-row class="separador">
+        <ion-col  class="aCentrar">
+          <h1>Nombre:</h1>
+        </ion-col>
+        <ion-col class="aCentrar">
+          <h1>{{this.persona.nombre}} {{this.persona.apellido}}</h1>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="separador">
+        <ion-col  class="aCentrar">
+          <h1>Valoración:</h1>
+        </ion-col>
+        <ion-col class="aCentrar">
+          <img class="imagen" alt="Foto del ejercicio" src="{{ getFoto() }}">
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="aCentrar">
+        <div *ngFor="let source of videoSrc" class="enunciadoVideo">
+          <video width="240" height="180" controls>
+            <source [src]="source" />
+          </video>
+        </div>
+      </ion-row>
+      
+      <ion-row class="aCentrar">
+        <div *ngFor="let source of audioSrc" class="enunciadoVideo">
+          <audio controls>
+            <source [src]="source" />
+          </audio>
+        </div>
+      </ion-row>
+      
+      <ion-row class="aCentrar">
+        <h1>Comentario: </h1>
+      </ion-row>
+
+      <ion-row class="aCentrar">
+        <h1>{{getMuchoTexto()}}</h1>
+      </ion-row>
+      
+    </ion-grid>
+
+  </div>
+</ion-content>

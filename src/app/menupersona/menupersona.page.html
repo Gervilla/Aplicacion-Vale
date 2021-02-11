@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      Hola, {{this.persona.nombre}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button routerLink='/fecha' color="vale-orange">
+          <div class="texto" style="color: white"><h1>Ejercicios</h1></div>
+          <img class="chat" alt="Boton para ver los ejercicios" src="../../assets/icon/libreta.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="vale-pink">
+          <div class="texto" style="color: white"><h1>Chats</h1></div>
+          <img class="chat" alt="Boton para ver los chats" src="../../assets/icon/chat.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="vale-secondary" routerLink='/feedback'>
+          <div class="texto" style="color: white"><h1>Valoración</h1></div>
+          <img class="chat" alt="Boton para ver los ajustes" src="../../assets/icon/estrella.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button routerLink='/calendario' color="white">
+          <img class="imagen" alt="Boton para ver el calendario" src="../../assets/icon/calendar.png">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="alertSalir()" color="white">
+          <img class="imagen" alt="Boton para salir de la sesión." src="../../assets/icon/salir.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

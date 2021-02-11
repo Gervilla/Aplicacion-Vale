@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img
+        class="vale-logo"
+        alt="Boton con el logo de Vale para ir atrás."
+        routerLink="/listaejercicios"
+        src="../../assets/images/vale-logo.png"
+      />
+    </ion-buttons>
+    <ion-title> {{this.ejercicio.nombre}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="cajaPerfil">
+    <label style="font-size: 20pt; padding: 30px">
+      <img class="perfil" alt="Foto del ejercicio." src="{{this.foto}}" />
+    </label>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div *ngFor="let source of videoSrc" class="enunciadoVideo">
+          <video width="240" height="180" controls>
+            <source src="{{source}}" />
+          </video>
+        </div>
+        <div *ngFor="let source of audioSrc" class="enunciadoVideo">
+          <audio controls>
+            <source [src]="source" />
+          </audio>
+        </div>
+        <ion-card>
+          <ion-card-content>
+            <div
+              [ngClass]="{'respuestagrande' : this.audioSrc.length == 0 && this.videoSrc.length == 0, 'respuestapequeña': this.audioSrc.length > 0 || this.videoSrc.length > 0}"
+            >
+              <div><b>Fecha de Inicio:</b> {{this.fechaInicio}} </div>
+              <div><b>Fecha Final:</b> {{this.fechaFinal}} </div>
+              <div>{{this.ejercicio.enunciado}} </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <div class="col">
+        <ion-label>Personas que han entregado:</ion-label>
+      </div>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button
+          *ngFor="let persona of personas"
+          routerLink="{{'/infoentrega/'+persona.idEntrega}}"
+          color="vale-primary"
+        >
+          <div class="texto" style="color: white">{{persona.fullname}}</div>
+          <img class="imagen" alt="Foto de la persona" src="{{persona.foto}}" />
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

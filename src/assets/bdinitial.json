@@ -1,0 +1,665 @@
+{
+  "administradores": [
+    {
+      "id": 1,
+      "nombre": "Eustaquio",
+      "apellido": "Vale",
+      "correo": "admin1@vale.es",
+      "contrasena": "soyadmin"
+    },
+    {
+      "id": 2,
+      "nombre": "Santiago",
+      "apellido": "Abascal",
+      "correo": "admin2@vale.es",
+      "contrasena": "soyadmin"
+    }
+  ],
+  "facilitadores": [
+    {
+      "id": 1,
+      "nombre": "Veronica",
+      "apellido": "Gonzalez",
+      "correo": "veronica@gmail.es",
+      "contrasena": "veronica123",
+      "foto": "png"
+    },
+    {
+      "id": 2,
+      "nombre": "Carmen",
+      "apellido": "Valenzuela",
+      "correo": "carva@gmail.com",
+      "contrasena": "carmat",
+      "foto": "png"
+    },
+    {
+      "id": 3,
+      "nombre": "Elicar",
+      "apellido": "Torres",
+      "correo": "elicartor@gmail.es",
+      "contrasena": "elitor",
+      "foto": "png"
+    },
+    {
+      "id": 4,
+      "nombre": "Felipe",
+      "apellido": "Castillo",
+      "correo": "felcas@gmail.es",
+      "contrasena": "felcas",
+      "foto": ""
+    },
+    {
+      "id": 5,
+      "nombre": "Luis",
+      "apellido": "Silva",
+      "correo": "Luismi@gmail.es",
+      "contrasena": "luisil",
+      "foto": "png"
+    }
+  ],
+  "_nfacilitadores": 6,
+
+  "personas": [
+    {
+      "id": 1,
+      "nombre": "Pepe",
+      "apellido": "Perez",
+      "codigo": "oot",
+      "foto": "jpg",
+      "idFacilitadores": [1, 2]
+    },
+    {
+      "id": 2,
+      "nombre": "Cesar",
+      "apellido": "Martinez",
+      "codigo": "tcg",
+      "foto": "jpg",
+      "idFacilitadores": [3, 4]
+    },
+    {
+      "id": 3,
+      "nombre": "Alexia",
+      "apellido": "Diaz",
+      "codigo": "goo",
+      "foto": "jpg",
+      "idFacilitadores": [2, 3, 5]
+    },
+    {
+      "id": 4,
+      "nombre": "Jorge",
+      "apellido": "Tabet",
+      "codigo": "cog",
+      "foto": "jpg",
+      "idFacilitadores": [3, 5]
+    },
+    {
+      "id": 5,
+      "nombre": "Luis",
+      "apellido": "Garcia",
+      "codigo": "ctt",
+      "foto": "png",
+      "idFacilitadores": [1, 4]
+    },
+    {
+      "id": 6,
+      "nombre": "María",
+      "apellido": "Ramos",
+      "codigo": "lzo",
+      "foto": "png",
+      "idFacilitadores": [1, 2, 4]
+    },
+    {
+      "id": 7,
+      "nombre": "Francisco",
+      "apellido": "Lopez",
+      "codigo": "gtc",
+      "foto": "jpg",
+      "idFacilitadores": [2, 5]
+    },
+    {
+      "id": 8,
+      "nombre": "José Antonio",
+      "apellido": "Lopez",
+      "codigo": "llo",
+      "foto": "",
+      "idFacilitadores": [1, 4, 5]
+    },
+    {
+      "id": 9,
+      "nombre": "Luis Miguel",
+      "apellido": "Navarro",
+      "codigo": "ocg",
+      "foto": "jpg",
+      "idFacilitadores": [3, 4]
+    },
+    {
+      "id": 10,
+      "nombre": "Jessica",
+      "apellido": "Zhang",
+      "codigo": "cto",
+      "foto": "jpg",
+      "idFacilitadores": [1, 3, 5]
+    },
+    {
+      "id": 11,
+      "nombre": "Marcos",
+      "apellido": "Mancilla",
+      "codigo": "ooc",
+      "foto": "",
+      "idFacilitadores": [2, 3]
+    },
+    {
+      "id": 12,
+      "nombre": "Beatriz",
+      "apellido": "Aperador",
+      "codigo": "loc",
+      "foto": "jpg",
+      "idFacilitadores": [2, 4]
+    },
+    {
+      "id": 13,
+      "nombre": "Briseida",
+      "apellido": "Ramirez",
+      "codigo": "col",
+      "foto": "jpg",
+      "idFacilitadores": [2, 3, 4]
+    },
+    {
+      "id": 14,
+      "nombre": "Martha",
+      "apellido": "Garcia",
+      "codigo": "ccg",
+      "foto": "png",
+      "idFacilitadores": [2, 4, 5]
+    }
+  ],
+  "_npersonas": 15,
+
+  "grupos": [
+    {
+      "id": 1,
+      "nombre": "Grupo A1",
+      "idFacilitador": 1,
+      "idPersonas": [1, 5, 6]
+    },
+    {
+      "id": 2,
+      "nombre": "Grupo A2",
+      "idFacilitador": 1,
+      "idPersonas": [6, 8, 10]
+    },
+    {
+      "id": 3,
+      "nombre": "Grupo A3",
+      "idFacilitador": 1,
+      "idPersonas": [1, 8, 10]
+    },
+    {
+      "id": 4,
+      "nombre": "Grupo A4",
+      "idFacilitador": 1,
+      "idPersonas": [5, 6, 10]
+    },
+    {
+      "id": 5,
+      "nombre": "Grupo A5",
+      "idFacilitador": 1,
+      "idPersonas": [1, 5, 8]
+    },
+
+    {
+      "id": 6,
+      "nombre": "Grupo B1",
+      "idFacilitador": 2,
+      "idPersonas": [1, 3, 6, 7]
+    },
+    {
+      "id": 7,
+      "nombre": "Grupo B2",
+      "idFacilitador": 2,
+      "idPersonas": [11, 12, 13, 14]
+    },
+    {
+      "id": 8,
+      "nombre": "Grupo B3",
+      "idFacilitador": 2,
+      "idPersonas": [1, 3, 13, 14]
+    },
+    {
+      "id": 9,
+      "nombre": "Grupo B4",
+      "idFacilitador": 2,
+      "idPersonas": [6, 7, 11, 12]
+    },
+
+    {
+      "id": 10,
+      "nombre": "Grupo C1",
+      "idFacilitador": 3,
+      "idPersonas": [2, 3, 4, 9]
+    },
+    {
+      "id": 11,
+      "nombre": "Grupo C2",
+      "idFacilitador": 3,
+      "idPersonas": [10, 11, 13]
+    },
+
+    {
+      "id": 12,
+      "nombre": "Grupo D1",
+      "idFacilitador": 4,
+      "idPersonas": [2, 5, 6, 12]
+    },
+    {
+      "id": 13,
+      "nombre": "Grupo D2",
+      "idFacilitador": 4,
+      "idPersonas": [8, 9, 13, 14]
+    },
+
+    {
+      "id": 14,
+      "nombre": "Grupo E",
+      "idFacilitador": 5,
+      "idPersonas": [3, 4, 7, 8, 10, 14]
+    }
+  ],
+  "_ngrupos": 15,
+
+  "ejercicios": [
+    {
+      "id": 1,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [1, 5, 6],
+      "borrador": false,
+      "nombre": "Ejercicio A1-1",
+      "enunciado": "Atarse los cordones.",
+      "fechaInicio": "2020-12-17",
+      "fechaFinal": "2020-12-22",
+      "foto": "jpg",
+      "video": "mp4",
+      "audio": ""
+    },
+    {
+      "id": 2,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [1, 5, 6],
+      "borrador": false,
+      "nombre": "Ejercicio A1-2",
+      "enunciado": "Hacer un adorno del arbol de navidad",
+      "fechaInicio": "2020-12-18",
+      "fechaFinal": "2020-12-22",
+      "foto": "jpg",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 3,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [1, 5, 6],
+      "borrador": false,
+      "nombre": "Ejercicio A1-3",
+      "enunciado": "Dibujar un paisaje",
+      "fechaInicio": "2020-12-18",
+      "fechaFinal": "2020-12-23",
+      "foto": "jpg",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 4,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [1, 5, 6],
+      "borrador": false,
+      "nombre": "Ejercicio A1-4",
+      "enunciado": "Hacer papiroflexia/origami",
+      "fechaInicio": "2020-12-19",
+      "fechaFinal": "2020-12-24",
+      "foto": "jpg",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 5,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [],
+      "borrador": true,
+      "nombre": "Ejercicio A1-5",
+      "enunciado": "Ayudar en la Cocina",
+      "fechaInicio": "2020-12-21",
+      "fechaFinal": "2020-12-25",
+      "foto": "jpg",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 6,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [],
+      "borrador": true,
+      "nombre": "Ejercicio A1-6",
+      "enunciado": "Encender la lampara de su cuarto",
+      "fechaInicio": "2021-01-05",
+      "fechaFinal": "2021-01-15",
+      "foto": "jpg",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 7,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [1, 5, 6],
+      "borrador": false,
+      "nombre": "Ejercicio A1-7",
+      "enunciado": "Hacer un video sobre su habitación",
+      "fechaInicio": "2021-01-13",
+      "fechaFinal": "2021-01-19",
+      "foto": "jpg",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 8,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [1, 5, 6],
+      "borrador": false,
+      "nombre": "Ejercicio A1-8",
+      "enunciado": "Escribir una redaccion",
+      "fechaInicio": "2021-01-16",
+      "fechaFinal": "2021-01-22",
+      "foto": "jpg",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 9,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [1, 5, 6],
+      "borrador": false,
+      "nombre": "Ejercicio A1-9",
+      "enunciado": "Tirar la basura",
+      "fechaInicio": "2021-01-18",
+      "fechaFinal": "2021-01-24",
+      "foto": "jpg",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 10,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [1, 5, 6],
+      "borrador": false,
+      "nombre": "Ejercicio A1-10",
+      "enunciado": "Doblar ropa",
+      "fechaInicio": "2021-01-20",
+      "fechaFinal": "2021-01-25",
+      "foto": "jpg",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 11,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [1, 5, 6],
+      "borrador": false,
+      "nombre": "Ejercicio A1-11",
+      "enunciado": "Regar las plantas",
+      "fechaInicio": "2021-01-18",
+      "fechaFinal": "2021-01-24",
+      "foto": "jpg",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 12,
+      "idFacilitador": 1,
+      "idGrupo": 1,
+      "idPersonas": [1, 5, 6],
+      "borrador": false,
+      "nombre": "Ejercicio A1-12",
+      "enunciado": "Ordenar",
+      "fechaInicio": "2021-01-24",
+      "fechaFinal": "2021-01-27",
+      "foto": "jpg",
+      "video": "",
+      "audio": ""
+    }
+  ],
+  "_nejercicios": 13,
+  "feedback": [
+    {
+      "id": 1,
+      "satisfaccion": 4,
+      "idPersona": 1,
+      "audio": "",
+      "video": "",
+      "comentario": "Es bastante util y accesible"
+    },
+    {
+      "id": 2,
+      "satisfaccion": 5,
+      "idPersona": 8,
+      "audio": "",
+      "video": "",
+      "comentario": "Mi aplicacion favorita a partir de ahora"
+    },
+    {
+      "id": 3,
+      "satisfaccion": 5,
+      "idPersona": 5,
+      "audio": "",
+      "video": "",
+      "comentario": "Muy contento, facil de utilizar"
+    },
+    {
+      "id": 4,
+      "satisfaccion": 3,
+      "idPersona": 2,
+      "audio": "",
+      "video": "",
+      "comentario": "La veo bien pero me confundo con los colores"
+    },
+    {
+      "id": 5,
+      "satisfaccion": 4,
+      "idPersona": 3,
+      "audio": "",
+      "video": "",
+      "comentario": "Bastante sencilla de utilizar"
+    },
+    {
+      "id": 6,
+      "satisfaccion": 5,
+      "idPersona": 7,
+      "audio": "",
+      "video": "",
+      "comentario": "Me gusta mucho como funciona la app y los colores e imagenes"
+    },
+    {
+      "id": 7,
+      "satisfaccion": 4,
+      "idPersona": 6,
+      "audio": "",
+      "video": "",
+      "comentario": "Gracias a esta app he conseguido aprender a atarme los cordones, muchas gracias"
+    },
+    {
+      "id": 8,
+      "satisfaccion": 5,
+      "idPersona": 4,
+      "audio": "",
+      "video": "",
+      "comentario": "Buscaba una aplicacion como esta, se agradece su gran accesibilidad"
+    }
+  ],
+  "_nfeedback": 9,
+  "entrega": [
+    {
+      "id": 1,
+      "idEjercicio": 1,
+      "idPersona": 1,
+      "fechaEntrega": "2020-12-19",
+      "respuesta": "Atandome los cordones",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 2,
+      "idEjercicio": 2,
+      "idPersona": 1,
+      "fechaEntrega": "2020-12-21",
+      "respuesta": "Haciendo adorno de arbol de navidad",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 3,
+      "idEjercicio": 3,
+      "idPersona": 1,
+      "fechaEntrega": "2020-12-21",
+      "respuesta": "Dibujando un paisaje",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 4,
+      "idEjercicio": 4,
+      "idPersona": 1,
+      "fechaEntrega": "2020-12-22",
+      "respuesta": "Haciendo papiroflexia",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 7,
+      "idEjercicio": 7,
+      "idPersona": 1,
+      "fechaEntrega": "2021-01-13",
+      "respuesta": "Hago video sobre mi habitacion",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 8,
+      "idEjercicio": 8,
+      "idPersona": 1,
+      "fechaEntrega": "2021-01-18",
+      "respuesta": "Haciendo una redaccion",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 9,
+      "idEjercicio": 9,
+      "idPersona": 1,
+      "fechaEntrega": "2021-01-21",
+      "respuesta": "Tirando la basura",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 10,
+      "idEjercicio": 10,
+      "idPersona": 1,
+      "fechaEntrega": "2021-01-20",
+      "respuesta": "Doblando la ropa",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 11,
+      "idEjercicio": 8,
+      "idPersona": 5,
+      "fechaEntrega": "2021-01-21",
+      "respuesta": "He hecho una redaccion",
+      "video": "",
+      "audio": ""
+    },
+
+    {
+      "id": 12,
+      "idEjercicio": 1,
+      "idPersona": 6,
+      "fechaEntrega": "2020-12-19",
+      "respuesta": "Atandome los cordones",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 13,
+      "idEjercicio": 2,
+      "idPersona": 6,
+      "fechaEntrega": "2020-12-23",
+      "respuesta": "Haciendo adorno de arbol de navidad",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 14,
+      "idEjercicio": 3,
+      "idPersona": 6,
+      "fechaEntrega": "2020-12-22",
+      "respuesta": "Dibujando un paisaje",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 15,
+      "idEjercicio": 4,
+      "idPersona": 6,
+      "fechaEntrega": "2020-12-22",
+      "respuesta": "Haciendo papiroflexia",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 16,
+      "idEjercicio": 1,
+      "idPersona": 5,
+      "fechaEntrega": "2020-12-22",
+      "respuesta": "Me ato los cordones",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 17,
+      "idEjercicio": 2,
+      "idPersona": 5,
+      "fechaEntrega": "2020-12-24",
+      "respuesta": "Hago un adorno para un arbol de navidad",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 18,
+      "idEjercicio": 3,
+      "idPersona": 5,
+      "fechaEntrega": "2020-12-22",
+      "respuesta": "Dibujo un paisaje",
+      "video": "",
+      "audio": ""
+    },
+    {
+      "id": 19,
+      "idEjercicio": 7,
+      "idPersona": 5,
+      "fechaEntrega": "2021-01-23",
+      "respuesta": "Grabando un video a mi habitación",
+      "video": "",
+      "audio": ""
+    }
+  ],
+  "_nentrega": 20
+}

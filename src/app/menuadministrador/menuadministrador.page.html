@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      Hola, {{this.administrador.nombre}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="vale-primary" routerLink='/gestionfacilitador' >
+          <div class="texto"><h1>Facilitadores</h1></div>
+          <img class="chat" alt="Acceder al menu de los facilitadores" src="../../assets/images/facilitador.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="vale-primary" routerLink='/gestionpersona'>
+          <div class="texto"><h1>Personas</h1></div>
+          <img class="chat" alt="Acceder al menu de las personas"src="../../assets/images/persona.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="vale-primary" routerLink='/listafeedback'>
+          <div class="texto"><h1>Valoraciones</h1></div>
+          <img class="chat" alt="Acceder al menu de las valoraciones"src="../../assets/icon/estrella.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-button (click)="alertSalir()" color="white">
+            <img class="imagen" alt="Boton para salir de la sesión" src="../../assets/icon/salir.png">
+          </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

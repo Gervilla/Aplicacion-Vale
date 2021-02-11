@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img
+        class="vale-logo"
+        alt="Boton con el logo de Vale para ir atrás."
+        (click)="goBack()"
+        src="../../assets/images/vale-logo.png"
+      />
+    </ion-buttons>
+    <ion-title> {{this.ejercicio.nombre}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="cajaPerfil">
+    <label style="font-size: 20pt; padding: 30px">
+      <img class="perfil" alt="Foto del ejercicio." src="{{this.foto}}" />
+    </label>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div *ngFor="let source of videoSrc" class="enunciadoVideo">
+          <video width="240" height="180" controls>
+            <source [src]="source" />
+          </video>
+        </div>
+
+        <div *ngFor="let source of audioSrc" class="enunciadoVideo">
+          <audio controls>
+            <source [src]="source" />
+          </audio>
+        </div>
+
+        <ion-card>
+          <ion-card-content>
+            <div
+              [ngClass]="{'respuestagrande' : this.audioSrc.length == 0 && this.videoSrc.length == 0, 'respuestapequeña': this.audioSrc.length > 0 || this.videoSrc.length > 0}"
+            >
+              <div><b>Fecha de Entrega:</b> {{this.fechaEntrega}} </div>
+              <div>{{this.entrega.respuesta}} </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="botEnviar">
+      <ion-button color="primary" class="envio">
+        <div style="color: white"><h1>Responder</h1></div>
+        <img
+          class="imagen"
+          alt="Boton de enviar respuesta"
+          src="../../assets/icon/enviar.png"
+        />
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

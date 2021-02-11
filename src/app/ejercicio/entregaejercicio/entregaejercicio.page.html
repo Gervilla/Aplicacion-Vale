@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." (click)="goBack()" src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      {{this.ejercicio.nombre}} (Entrega)
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class='cajaPerfil'>
+    <label style="font-size: 20pt; padding: 30px">
+      <img class='perfil' alt="Foto del ejercicio" src="{{this.foto}}"/>
+    </label>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+            
+            <div *ngFor="let source of videoSrc" class="enunciadoVideo">
+              <video width="240" height="180" controls>
+                <source src="{{source}}">
+              </video>
+            </div>
+            <div *ngFor="let source of audioSrc" class="enunciadoVideo">
+              <audio controls>
+                <source [src]="source">
+              </audio>
+            </div>
+        <ion-card>
+          <ion-card-content>
+            <div  [ngClass]="{'respuestagrande' : this.audioSrc.length == 0 && this.videoSrc.length == 0, 'respuestapequeña': this.audioSrc.length > 0 || this.videoSrc.length > 0}">
+            <ion-textarea rows="5" maxlength="100" placeholder="Introduzca su respuesta aqui" 
+            [(ngModel)]="entrega.respuesta">
+            </ion-textarea>
+          </div>
+         </ion-card-content>
+        </ion-card>
+     
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="botonesAbajo">
+        <ion-button color="vale-primary" class="icon">
+          <input
+          id="input2"
+          type="file"
+          accept=".mp4,.mp3,.wav,.ogg"
+          class="hideInput"
+          (change)="cambiarMedia($event)"
+          />
+          <img class="icono" alt="Boton de adjuntar archivo" src="../../assets/icon/adjuntar.png">
+        </ion-button>
+      </ion-col>
+      <ion-col class="botonesAbajo">
+        <ion-button color="vale-primary" class="icon">
+          <input
+          id="input2"
+          type="file"
+          accept=".mp4"
+          class="hideInput"
+          (change)="cambiarMedia($event)"
+          />
+          <img class="icono" alt="Boton de grabar video" src="../../assets/icon/video.png">
+        </ion-button>
+      </ion-col>
+      <ion-col class="botonesAbajo">
+        <ion-button color="vale-primary" class="icon">
+          <input
+          id="input2"
+          type="file"
+          accept=".mp3,.wav,.ogg"
+          class="hideInput"
+          (change)="cambiarMedia($event)"
+          />
+          <img class="icono" alt="Boton del microfono para grabar audio" src="../../assets/icon/micro.png">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="botEnviar">
+      <ion-button (click)="alertEnviar()" color="primary" class="envio">
+        <div style="color: white"><h1>Enviar</h1></div>
+        <img class="imagen" alt="Boton de enviar respuesta" src="../../assets/icon/enviar.png">
+      </ion-button>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

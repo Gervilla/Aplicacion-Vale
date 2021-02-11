@@ -1,0 +1,53 @@
+.log{    
+    width: 80%;
+    margin: auto;
+    margin-top: 3vh;
+    max-width: 600px;
+}
+
+.introducir{
+    font-size: 3vh;
+}
+
+.boton{
+    margin-top: 8vh;
+    font-size: 3vh;
+}
+
+.codigo{
+    height: 9vh;
+    width: 90%;
+}
+
+
+.codigo-imagen{
+    max-height: 3.5rem;
+}
+
+.cajaPerfil{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:25vh;
+}
+
+.perfil{
+    height: 25vh;
+    width: 25vh;
+    object-fit: cover;
+}
+
+.aCentrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separador{
+    margin-bottom: 8--vh;
+}
+
+.imagen{
+    height: 10vh;
+    width: 10vh;
+}

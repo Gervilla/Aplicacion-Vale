@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img
+        class="vale-logo"
+        alt="Boton con el logo de Vale para ir atrás."
+        (click)="goBack()"
+        src="../../assets/images/vale-logo.png"
+      />
+    </ion-buttons>
+    <ion-title>{{this.persona.nombre}} {{this.persona.apellido}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="log">
+    <div class="cajaPerfil">
+      <label style="font-size: 20pt; padding: 30px">
+        <img class="perfil" alt="Foto de la persona" src="{{this.foto}}" />
+      </label>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="col">
+            <ion-label
+              >Nombre: {{this.persona.nombre}}
+              {{this.persona.apellido}}</ion-label
+            >
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid [hidden]="this.esFacilitador">
+      <ion-row>
+        <ion-col>
+          <div class="col">
+            <ion-label>Facilitadores:</ion-label>
+          </div>
+          <div>
+            <ion-chip
+              *ngFor="let i of facilitadores"
+              color="vale-primary"
+              routerLink="{{'/infofacilitador/'+i.id}}"
+            >
+              <ion-label>{{i.fullname}}</ion-label>
+            </ion-chip>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="col">
+            <ion-label>Codigo:</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="codigo" color="{{this.Color1()}}">
+            <img
+              class="codigo-imagen"
+              alt="Primer animal del codigo de la persona"
+              src="{{this.Imagen1()}}"
+            />
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="codigo" color="{{this.Color2()}}">
+            <img
+              class="codigo-imagen"
+              alt="Segundo animal del codigo de la persona"
+              src="{{this.Imagen2()}}"
+            />
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="codigo" color="{{this.Color3()}}">
+            <img
+              class="codigo-imagen"
+              alt="Tercer animal del codigo de la persona"
+              src="{{this.Imagen3()}}"
+            />
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid [hidden]="!this.esFacilitador">
+      <ion-row>
+        <ion-col>
+          <div class="col">
+            <ion-label>Grupos:</ion-label>
+          </div>
+          <div>
+            <ion-chip
+              *ngFor="let i of grupos"
+              color="vale-primary"
+              routerLink="{{'/infogrupo/'+i.id}}"
+            >
+              <ion-label>{{i.nombre}}</ion-label>
+            </ion-chip>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button
+      color="vale-secondary"
+      (click)="goToEdit()"
+      [hidden]="this.esFacilitador"
+    >
+      <ion-icon name="pencil-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

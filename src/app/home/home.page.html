@@ -1,0 +1,24 @@
+<meta name="mobile-web-app-capable" content="yes">
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      ¿Quien Eres?
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div>
+      <ion-button class="boton1" color="vale-primary" routerLink='/codigo' >
+        <img class="imagen" alt="Iniciar sesión para personas" src="../../assets/images/persona.png">
+      </ion-button>
+      <ion-button class="boton1" color="vale-primary" routerLink='/codigofacilitador'>
+        <img class="imagen" alt="Iniciar sesión para facilitadores" src="../../assets/images/facilitador.png">
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

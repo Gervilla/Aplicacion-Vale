@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." routerLink="/gestionfacilitador" src="../../assets/images/vale-logo.png"/>
+    </ion-buttons>
+    <ion-title>{{this.facilitador.nombre}} {{this.facilitador.apellido}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="log" [hidden]="this.seleccionarFacilitadores">
+    <div class='cajaPerfil'>
+
+      <label style="font-size: 20pt; padding: 30px">
+        <img class='perfil' alt="Foto del facilitador" src="{{this.foto}}"/>
+      </label>
+    </div>
+
+    <ion-grid [hidden]="this.editando">
+      <ion-row>
+        <ion-col>
+          <div class="col">
+            <ion-label>Nombre: {{this.facilitador.nombre}} {{this.facilitador.apellido}}</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="col">
+            <ion-label>Correo: {{this.facilitador.correo}}</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="col">
+            <ion-label>Contraseña: {{this.facilitador.contrasena}}</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="col">
+            <ion-label>Personas:</ion-label>
+          </div>
+          <div>
+            <ion-chip *ngFor="let i of personas" color="vale-primary" routerLink="{{'/infopersona/'+i.id}}">
+              <ion-label>{{i.fullname}}</ion-label>
+            </ion-chip>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" [hidden]="this.editando">
+    <ion-fab-button color="vale-secondary" (click)="goToEdit()">
+      <ion-icon name="pencil-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

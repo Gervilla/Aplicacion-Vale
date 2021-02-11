@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img class="vale-logo" alt="Boton con el logo de Vale para ir atrás." routerLink='/menuadministrador' src="../../assets/images/vale-logo.png">
+    </ion-buttons>
+    <ion-title>
+      Valoraciones recibidas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar (ionInput)="filterList($event)" showCancelButton="focus"></ion-searchbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="opcion(0)" color="vale-primary" [hidden]="isHidden(0)">
+            <div class="texto"><h1>{{ this.getName(0) }} </h1></div>
+            <img class="profile-pic" alt="Foto de perfil de la persona" src="{{ this.getFoto(0) }}">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="opcion(1)" color="vale-primary" [hidden]="isHidden(1)">
+            <div class="texto"><h1>{{ this.getName(1) }}</h1></div>
+            <img class="profile-pic" alt="Foto de perfil de la persona" src="{{ this.getFoto(1) }}">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="opcion(2)" color="vale-primary" [hidden]="isHidden(2)">
+            <div class="texto"><h1>{{ this.getName(2) }}</h1></div>
+            <img class="profile-pic" alt="Foto de perfil de la persona" src="{{ this.getFoto(2) }}">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="opcion(3)" color="vale-primary" [hidden]="isHidden(3)">
+            <div class="texto"><h1>{{ this.getName(3) }}</h1></div>
+            <img class="profile-pic" alt="Foto de perfil de la persona" src="{{ this.getFoto(3) }}">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="previousPage()" color="transparent" [class.button-disabled]="isPButtonDisable()">
+            <img class="imagenI" alt="Flecha para ir a la izquierda" src="../../assets/icon/flechaI.png">
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="nextPage()" color="transparent" [class.button-disabled]="isNButtonDisable()">
+            <img class="imagenD" alt="Flecha para ir a la derecha" src="../../assets/icon/flechaD.png">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
